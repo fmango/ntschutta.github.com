@@ -1,4 +1,4 @@
-ntschutta..github.com
+ntschutta.github.com
 =====================
 
 Jekyll source for my personal blog.
