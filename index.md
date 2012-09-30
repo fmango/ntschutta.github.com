@@ -12,7 +12,7 @@ speak at! Want to know more about me? Check out my
 [biography](about.html). Curious about my presentation style? You
 can learn all about it at [Presentation Patterns](http://presentationpatterns.com).
     
-## Upcoming Talks:
+## Upcoming Talks
 
 [Software Architect](http://www.software-architect.co.uk)  
 London, UK  
