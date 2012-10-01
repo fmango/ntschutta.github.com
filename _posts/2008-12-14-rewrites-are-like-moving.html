@@ -1,0 +1,23 @@
+--- 
+layout: post
+meta: 
+  _edit_last: "1"
+status: publish
+tags: 
+- Development
+- Software
+title: Rewrites Are Like Moving
+type: post
+published: true
+---
+Moving is one of those things that (hopefully) we don't have to do that often; it takes a lot of time and energy plus it is a real pain in the behind. But, every so often we have to pick up stakes and when we do, we're usually amazed at just how much stuff we've accumulated. This is particularly obvious when you're in college - I distinctly remember packing for the summer wondering how the heck I'd get it all home; I'd only needed one trip up in the fall, why would I need so many in the spring? And then it would occur to me. I'd made several trips during the year, where I'd innocently bring one or two items, maybe even a bag of stuff. Over time, the bits built up.
+
+Software works the same way. Over time, a feature is added here, refined there and before you know you've got a mature product. And a messy codebase. Eventually this will lead to a rewrite often accompanied by a technology change of some sort or another (this time we'll get it right!) Rewrites can be pretty good projects but they're not without their perils. For one, customers usually won't spend much time defining requirements. I've often heard "it needs to work just like the old system...only better" with better being some vague hand-waving around a pet peeve or two.
+
+In addition to vague requirements, rewrites tend to suffer from estimation fatigue. Customers are convinced that they need to have all of the old system's functionality (plus all the new doodads they thought up over the last 20 plus years) and they need to have it <strong>*right now*</strong>.  Like my college aged self in the spring, many customers loose site of the gradual build up in functionality of the existing systems and many will insist that the new one won't be useful until it fully replicates the old. That last statement doesn't hold water but good luck convincing someone that feels otherwise; the old system didn't have all its features on day one either but that's not the anchor point for the people asking for the new system.
+
+Rewrites are an excellent opportunity to do some process reengineering and, if done right, usually results in a vastly improved workflow. Of course this requires us to look past the angry monkeys in our systems and think of how things <em>could be</em> rather than how they <em>currently are</em>. This step is often skipped though, and we simply end up further codifying the legacy approach. But at least it's in a new technology stack.
+
+Whenever I've moved, I've used it as an excuse to prune some of the stuff I've accumulated over the years (hint - look for boxes that you didn't unpack the last time you relocated.) When you encounter a rewrite, see if you can't do the same, try to eliminate some features, reports or screens. Most customers will scream bloody murder when you suggest clipping things, but <a href="http://gettingreal.37signals.com/ch05_Half_Not_Half_Assed.php">half a product beats half-assed</a> any day of the week. Writing code is like writing prose, the important bits are the ones you cut - applying this approach leaves you with a smaller codebase that's easier to maintain. Besides, the code we don't write is bug free.
+
+So, next time you're staring a rewrite in the face, see if you can't cut some of the detritus; odds are you don't really need all 283 "views." But instead of using words like eliminate, try defer - most customers will see that as less scary. Be sure to remind them that you can always add that in later when you have a better sense of what you actually need. Odds are those "must haves" will slip quietly to the bottom of the backlog.

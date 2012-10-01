@@ -1,0 +1,36 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Ajax
+- Development
+- Software
+title: Ajax and Server Load
+type: post
+published: true
+---
+At <a href="http://ntschutta.com/jat/2006/04/20/otug-slides/">OTUG on Tuesday</a>, we got the "but does it scale" question regarding Ajax; a topic that has actually come up at work in regards to the <a href="http://www.google.com/webhp?complete=1&hl=en">Google Suggest</a> functionality (incidentally, Joel's <a href="http://www.joelonsoftware.com/items/2004/12/10.html">article about Google Suggest</a> first triggered my interest in the <a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">XHR</a> object).  Now, I've <a href="http://ntschutta.com/jat/2005/11/19/death-by-a-thousand-cuts/">talked about this a bit</a> in the past and we basically said - of course it scales...if you do it right.  Obviously, Ajax can get "chatty" and I really do have some concerns about dozens of fine grained calls - to this end, I brought up the initial forays into EJB land that resulted in good old <a href="http://www.martinfowler.com/eaaCatalog/dataTransferObject.html">Data Transfer Objects</a>.  All in all, I'm of the opinion that Ajax <em>should</em> increase performance by lazily fetching data and, when properly architected, scale horizontally quite well.  Interestingly enough, it turns out that this very question is making its way around the blogosphere...
+
+Today, <a href="http://www.tbray.org/ongoing/">Tim Bray</a> posted <a href="http://www.tbray.org/ongoing/When/200x/2006/04/19/The-Cost-of-AJAX">The Cost of AJAX</a> where he refers to <a href="http://www.redmonk.com/jgovernor/archives/001526.html">a post</a> from <a href="http://www.redmonk.com/jgovernor/">James Governor</a> essentially asking for thoughts about WebSphere guru <a href="http://www.devwebsphere.com/about.html">Billy Newport</a>'s recent writings.  Billy got things started with the innocently titled: <a href="http://www.devwebsphere.com/devwebsphere/2006/04/ajax_and_its_im.html">AJAX and its impact on servers</a>.  Now, I've tracked Billy's blog on and off (I worked on WebSphere based apps for many years) but I'm not really sure what he's basing this quote on: 
+
+<blockquote>I think it's becoming clear now that AJAX enabled applications generate a higher load on an application server than a non AJAX application.</blockquote>
+
+Really?  Considering that <a href="http://www.basecamphq.com/">Basecamp</a> ran on <a href="https://gettingreal.37signals.com/samples/37s-scale-later.pdf">one server for its first year</a>, I'm curious what causes him to make a statement like that.  I'm not saying there isn't some truth to it, but I haven't been hearing any screaming about this issue; I'm not sure, but I suspect Gmail gets a few hits a day and it seems to be doing OK...  Of course maybe he's just trying to sell more IBM gear ;) 
+
+<blockquote>Distributed caching is a critical piece of the toolkit to help with this. Technologies like ObjectGrid allow an application server to pull data from a remote ObjectGrid cluster in under a ms.</blockquote>
+
+In the followup <a href="http://www.devwebsphere.com/devwebsphere/2006/04/the_hidden_cost.html">The hidden costs of lazy fetch with AJAX</a>, Billy once again plugs ObjectGrid but he also challenges us to consider patterns for client/server interaction (might I suggest <a href="http://softwareas.com/">Michael Mahemoff</a>'s <a href="http://ajaxpatterns.org/">AjaxPatterns</a> site).  Billy mentions that every database call has a fixed cost so executing more than is necessary can have a negative impact on your application.  But he rightly states this is nothing new - frankly, just like the security issues that occasionally crop up in the Ajax space.  Hey, this isn't rocket surgery, the same rules still apply.  Now that we can finally give our users a truly rich interface while still retaining the benefits of a server based app doesn't mean we can forget all the lessons we've learned the last decade.
+
+So back to Tim who wanders in and points out that most web pages are already making multiple calls!  I especially like this quote:
+
+<blockquote>So saying â€œAJAX is expensiveâ€ (or that itâ€™s cheap) is like saying â€œA mountain bike is slower than a battle tankâ€ (or that itâ€™s faster). The truth depends on what youâ€™re doing with it.</blockquote>
+
+That said, I am interested in what Ajax means for load testing.  If we say our application needs to support 100 concurrent users, what happens when said users are making 20 calls each instead of say, 5?  Ajax isn't a cure for cancer and adding it to your application won't instantly make you the target of a takeover bid from Google.  But, used properly, it can significantly improve your user experience.  There's a chance you might have to add more hardware, but frankly that's a nice problem to have.
+
+You know, what I really love about <a href="http://www.unitedmedia.com/comics/dilbert/">Dilbert</a> is how <a href="http://dilbertblog.typepad.com/">Scott Adams</a> seems to be writing about things that are happening in my workplace when they happen...what I love about the blogosphere is how questions that come up in the course of my day are debated by the likes of Tim and Billy!  For whatever reason, this thread doesn't seem to have been picked up by the "major" Ajax sites but this is important stuff.  I echo calls from the comments to <a href="http://www.devwebsphere.com/devwebsphere/2006/04/ajax_and_its_im.html#c16288502">back up the claims with data</a> - but I'll leave you with this thought from <a href="http://www.josh-peters.name/blog/">Josh Peters</a>:
+
+<blockquote>In the end though, it's really nothing new: unless you understand a technology you cannot expect to weild it well.</blockquote>
+
+  Well said.

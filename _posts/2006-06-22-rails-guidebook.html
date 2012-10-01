@@ -1,0 +1,31 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rails
+- RailsConf
+- Software
+title: Rails Guidebook
+type: post
+published: true
+---
+And so it begins!  I've had the pleasure of seeing <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> in the past and as I expected he's on top of his game today.  Funny and articulate, I think I'd sit and listen to Dave explain actuary tables, discuss a hot new time share investment, heck, even just read the phone book.  I've never heard <a href="http://clarkware.com/">Mike Clark</a> live but he's top notch!  The only complaint I can make at this point - the ~100 or so of us are overwhelming this little wireless network.  Apparently an "industrial grade" installation is coming this afternoon (thank god - otherwise this could get ugly).
+
+The morning section has largely been a <a href="http://www.rubycentral.com/">Ruby</a> overview - a level set as they say.  While I've read through <a href="http://www.pragmaticprogrammer.com/titles/ruby/index.html">Pick Axe</a>, it never hurts to hear another twist on the material (especially blocks and symbols).  So far I've taken a ton of notes and I'm (surprise) even more interested in finding new ways to "sneak" Ruby into my daily work.
+
+The section on <a href="http://en.wikipedia.org/wiki/Metaprogramming_(programming)">meta programming</a> was particularly interesting.  The beauty of <a href="http://www.rubyonrails.org/">Rails</a> is, to a large degree, thanks to the amazing capabilities of the Ruby language itself - all calls have receivers (though you can warp your mind a bit when it comes to class of Class...), definitions are active (the code can change on the fly) and classes are open (so you're always free to add or modify methods on <strong>*any*</strong> class).  I'll admit, as a recovering Java addict, my first thought when I encounter open classes is not a positive one.  While the thought of the proverbial chim chim adding to (or changing) one of <strong>*my*</strong> classes makes my skin crawl, in the hands of competent developers it's a darn powerful feature.  Luckily Dave shared an inside tip on how to fix the situation where a lesser mortal mucks up a class they shouldn't (lets just say it involves a trip to Home Depot)...  Still, the whole meta programming concept really appeals to me - I want that power!  Of course it means we have a greater level of responsibility but then we are professionals right?  Heck, carpenters don't use "safety saws" to build a house, why do developers deliberately hamstring themselves?
+
+Frankly, I think this is a numbers game.  The average Java application requires significantly more developers than the average Rails app so the chances that you'll have a couple of, shall we say, less than excellent developers is much higher in the Java space.  So, if you're one of the silver backs, you <em>want</em> your language to make it harder for the feces hurler one cube over to, well, screw things up too badly.  Personally, I think I'll take the more expressive power over the safety...
+
+Lunch was a blast!  We (Ben from Minnie, Gary from California, John from DC but thinking of moving to Minnie!) wandered over to <a href="http://www.chipotle.com/">Chipotle</a> (mmm, burritos) where we engaged in a far ranging conversation on billable rates, why Ruby and Rails rocks, thoughts on <a href="http://an-inconvenient-truth.com/">An Inconvenient Truth</a>, whether the greater level of transparency afforded by the blogosphere has contributed to the level of cynicism in modern politics...for a while there I thought I was at a model UN meeting or something.  It was good times!
+
+The afternoon was Rails in a blur - basically, Mike and Dave wanted to introduce us to the key concepts, places to avoid, and topics we should perhaps focus on over the course of the long weekend.  Of course they did the standard <a href="http://en.wikipedia.org/wiki/Model_view_controller">MVC</a> lecturelet but they had an interesting twist: think of the controller as the CEO, involved in strategy but not the details - which are carried out by the admins (in other words the model) while the outside view is handled by marketing (the view component).  Good analogy!
+
+There was a very interesting conversation about code in the view and whether or not web designers can "handle" that.  Mike was pretty adamant that most web designers were more than capable saying that while we as server side guys dabble in web stuff, the view folks want to dip their toes into our waters as well.  In other words, don't sell the front end guys short - they're probably sharper than you think ;)  Again Dave had sage advice for dealing with designers that can't stand a little code - get rid of them.
+
+The advice from the scaffolding section was pretty spot on too.  While great for showing off and exploring, as of now, it's just not up to par for production code.  But don't forget, when you use scaffolding to build a structure, eventually the scaffolding comes down...  After learning where not to go (components, engines, XML-RPC/SOAP), Dave and Mike pounded through a number of topics including testing, routes (however you pronounce it), REST, <a href="http://plugins.radrails.org/directory/show/69">Simply Restful</a>, plugins, and <a href="http://manuals.rubyonrails.com/read/book/17">deployment</a>.
+
+All in all, a great session (participants raised over $8,000 for charities) and I'm even more interested in attending a <a href="http://www.pragmaticstudio.com/">Pragmatic Studio</a>  session (not sure which one though...)  One interesting note - sure am seeing a large number of Macs (shocker) as I wander around!  And my wife made this comment when I got back to the room "there sure are an awful lot of geeks here".  Yes dear, there really are!

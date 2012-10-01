@@ -1,0 +1,21 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Agile
+- Development
+- Rants
+- Software
+title: I {Heart} Dynamic Languages
+type: post
+published: true
+---
+I've been meaning to blog this for a couple of weeks now but for some reason (oh, that's right, the little rug rat) the only time I find to write is when I'm sitting in airport terminals. Today I find myself in the glorious C concourse at <a href="http://www.mspairport.com/msp/default.aspx">MSP</a> even though I'm taking one of my shortest hops of the year - all the way to <a href="http://ntschutta.com/jat/2007/06/26/wisconsin-jugs/">Milwaukee</a>! It's just a good thing I married one of the most understanding women on the planet; after leaving her to play man up on the little one for the <a href="http://www.nofluffjuststuff.com/show_view.jsp?showId=84">weekend</a>, I've increased the challenge by disappearing during the week. Thank god I can compare my travel to <a href="http://www.agiledeveloper.com/">Venkat</a>!
+
+Anywho, two weeks ago I found myself fixing some JavaScript and I was reminded why I <a href="http://www.paulgraham.com/avg.html">so love dynamic languages</a>. We had a situation (two actually) where I had to add additional parameters to an existing method to clean up some issues that were showing up on one particular page. Since JavaScript isn't too particular on method signatures, I was able to make the changes without impacting *any* existing calls to the method - they weren't even aware I made the change. Now, I know that in static language land, I could have just overridden the method but then I'd be left with those little one line orphans that do nothing but call the new improved function. Oh, and I would have had that wonderful recompile stage! Small thing, but I was just ever so tickled that I could quickly and easily fix a specific problem without fear of disrupting other code.
+
+Just last week I had another "<a href="http://www.paulgraham.com/hp.html">dynamic languages rock</a>" moment. One of the interns has been busy getting <a href="http://groovy.codehaus.org/">Groovy</a> working on some simple scripts to help out with a couple of things. First, he wrote - in just a few hours - a Groovy script that combined a handful of JavaScript files into one (akin to what the <a href="http://www.prototypejs.org/">Prototype</a> folks do). Thanks to <a href="http://www.davisworld.org/">Scott</a>'s presentation, he was up and running in almost no time. His productivity was quite something - it seemed like he was asking for more constantly. I'll be the first to admit that I had mostly written off Groovy what with <a href="http://jruby.codehaus.org/">JRuby</a> and all, but after seeing what we were able to do in just a short amount of time, I'm definitely on the bandwagon. But then it's not a zero sum game ;)
+
+Now I'm sure some will call the tasks we accomplished in the last couple of weeks "trivial" or perhaps "academic" but I just don't care. Groovy scratched an itch and JavaScript is one again reminding me that it's a first class language; perhaps even the <a href="http://steve-yegge.blogspot.com/2007/02/next-big-language.html">next big thing</a>.

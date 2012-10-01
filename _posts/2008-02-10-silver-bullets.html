@@ -1,0 +1,146 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Agile
+- Development
+- Software
+title: Silver Bullets
+type: post
+published: true
+---
+After listening to an <a href="http://www.oopsla.org/oopsla2008/">OOPSLA</a> <a href="http://www.oopsla.org/oopsla2007/index.php?page=podcasts/">podcast</a> about a workshop on <a href="http://en.wikipedia.org/wiki/Fred_Brooks">Fred Brooks</a>' widely read <a href="http://info.computer.org/portal/site/computer/menuitem.eb7d70008ce52e4b0ef1bd108bcd45f3/index.jsp?&pName=computer_level1&path=computer/homepage/misc/Brooks&file=index.xml&xsl=article.xsl&;jsessionid=HvSGPqMQyCtxc7bQPQmz9vbKhC1lwQ8yypq9RQwG9HBfybxyFLFb!-449791248">No Silver Bullets</a>, I was inspired to reread his seminal piece. Though 20 years old, I was struck by just how applicable NSB is today and while there are a few things that place it in time, as I've said before, <a href="http://ntschutta.com/jat/2007/10/06/the-more-things-change-2/">the more things change</a>, the more they remain the same. Heck, I even decided to assign it at <a href="http://www-users.itlabs.umn.edu/classes/Spring-2008/seng5199/">dynamic language camp</a>. Much of what Brooks writes about relates to accidental vs. essential complexity, a topic that's echoed by <a href="http://memeagora.blogspot.com/">Neal Ford</a> in <a href="http://memeagora.blogspot.com/2007/09/ruby-matters-meta-programming-synthesis.html">this post</a> and <a href="http://weblog.raganwald.com/">Reg Braithwaite</a> <a href="http://weblog.raganwald.com/2007/07/abbreviation-accidental-complexity-and.html">here</a>. <a href="http://relevancellc.com/blog">Stu Halloway</a> touched on this at <a href="http://www.umsec.umn.edu/code_freeze_08/">Code Freeze</a> this year though he rephrased the concept as <a href="http://www.relevancellc.com/2008/1/17/slides-posted-ending-legacy-code">essence vs. ceremony</a>. More and more, we're finally heeding the message found in this <a href="http://en.wikipedia.org/wiki/C._A._R._Hoare">C. A. R. Hoare</a> quote:
+
+
+
+<blockquote>“Programmers are always surrounded by complexity; we cannot avoid it. ... If our basic tool, the language in which we design and code our programs, is also complicated, the language itself becomes part of the problem rather than part of its solution.”</blockquote>
+
+
+
+Anyway, on to Brooks. In the spirit of a number of <a href="http://blogs.tedneward.com/">Ted Neward</a>'s posts, I'll take snippets of NSB and inject my thoughts. Let's start near the top with this gem:
+
+
+
+<blockquote>"[Germ theory] told workers that progress would be made stepwise, at great effort, and that a persistent, unremitting care would have to be paid to a discipline of cleanliness. So it is with software engineering today."
+
+</blockquote>
+
+Though perhaps not what he intended, I see this as yet another call for <a href="http://www.martinfowler.com/articles/continuousIntegration.html">continuous integration</a> as well as <a href="http://en.wikipedia.org/wiki/Fixing_Broken_Windows">fixing broken windows</a>. It isn't easy, it takes a great deal of work, but when we fail to be diligent, our "patients" get sick. And anyone that's ever worked on decaying software knows how much fun that is...
+
+This quote should be endlessly fed to those that think programmers are essentially typists:
+
+
+
+<blockquote>"<em>I believe the hard part of building software to be the specification, design, and testing of this conceptual construct, not the labor of representing it and testing the fidelity of the representation.</em> We still make syntax errors, to be sure; but they are fuzz compared with the conceptual errors in most systems."
+</blockquote>
+
+This work is made up of thought stuff - and anything we do to disrupt flow will ultimately hurt our chances of successfully developing software.
+
+To those that think some tool or modeling language will make software so easy anyone can do, I'd counter with this:
+
+
+
+<blockquote>"The complexity of software is an essential property, not an accidental one. Hence, descriptions of a software entity that abstract away its complexity often abstract away its essence."
+</blockquote>
+
+
+In other words, software is hard...though we often make it harder. Sometimes that's related to our organizations:
+
+
+
+<blockquote>"Much of the complexity that he must master is arbitrary complexity, forced without rhyme or reason by the many human institutions and systems to which his interfaces must conform. These differ from interface to interface, and from time to time, not because of necessity but only because they were designed by different people, rather than by God."
+</blockquote>
+
+
+Further confirming that the problems in software are largely people oriented, one can practically hear Brooks' echo in the <a href="http://agilemanifesto.org/">agile manifesto</a>:
+
+
+
+<blockquote>"The central question in how to improve the software art centers, as it always has, on people."
+</blockquote>
+
+
+<a href="http://whydoeseverythingsuck.com/2008/01/rip-mitch-kapors-chandler.html">Technologies don't kill projects</a>, people do and better programmers really are better, a point made by <a href="http://memeagora.blogspot.com/2007/10/developer-productivity-mean-vs-median.html">Neal</a> as well as <a href="http://www.paulgraham.com/gh.html">Paul Graham</a>:
+
+
+
+<blockquote>"The differences between the great and the average approach an order of magnitude."
+</blockquote>
+
+
+These days, I'm asked often about how we're going to "scale up" our development teams which is really just management speak for "off shore 80% of the work." Now, fundamentally, I don't have any issues with taking advantage of vast labor pools, but I'd much rather have a small team of top notch developers than a large team of, well, less than average ones. I'm not sure if it's just the fiefdom complex or the overriding dictate of distant management, but big teams are usually problematic. With a few great developers, I can move the world. And let's never forget <a href="http://en.wikipedia.org/wiki/Garbage_in,_garbage_out">garbage in, garbage out</a>.
+
+Back to Brooks - he's more entertaining than I am. He touches on something near and dear to my heart praising higher level languages:
+
+
+
+<blockquote>"Surely the most powerful stroke for software productivity, reliability, and simplicity has been the progressive use of high-level languages for programming. Most observers credit that development with at least a factor of five in productivity, and with concomitant gains in reliability, simplicity, and comprehensibility."
+</blockquote>
+
+Seems to echo with what people say about Rails, Ruby and a host of other languages these days. Expressiveness matters - a lot.
+
+I'd argue this is largely what Stu was getting at in his <a href="http://relevancellc.com/assets/2008/1/17/EndingLegacyCodeInOurLifetime_1.pdf">Ending Legacy Code</a> talk:
+
+
+
+<blockquote>"[Abstract types and hierarchical types] removes yet another accidental difficulty from the process, allowing the designer to express the essence of the design without having to express large amounts of syntactic material that add no information content. For both abstract types and hierarchical types, the result is to remove a higher-order kind of accidental difficulty and allow a higher-order expression of design."
+</blockquote>
+
+Getting rid of boiler plate and focusing on the problem at hand is key. I know a lot of developers who defensively shout "but my tool handles all that for me." Sure. See above. And don't forget, you or someone coming in behind you will still have to read all those excess symbols.
+
+Though I wish buying new hardware would solve all our woes, Brooks reaffirms what we already know:
+
+
+
+<blockquote>"More powerful workstations we surely welcome. Magical enhancements from them we cannot expect."
+</blockquote>
+
+Bummer. Guess I'll need a better reason to get that new <a href="http://www.apple.com/macbookpro/">MBP</a>.
+
+There's quite an agile flavor to NSB and a number of Brooks' comments speak very well of what is becoming a more and more common approach to writing software. I'm not sure about you, but I haven't seen much success with waterfall...but iteratively developing solutions seems to work, a point he makes quite clearly:
+
+
+
+<blockquote>"Therefore, the most important function that the software builder performs for the client is the iterative extraction and refinement of the product requirements. For the truth is, the client does not know what he wants. The client usually does not know what questions must be answered, and he has almost never thought of the problem in the detail necessary for specification."
+</blockquote>
+
+
+Despite what some think, you just can't get it <a href="http://en.wikipedia.org/wiki/Big_Design_Up_Front">all right up front</a>. This isn't some fundamental failing, it's a feature not a bug. Rather than attempt to fight this, just work with it; instead of trying to write it all on the plan before you break ground, iterate. Software types tend to be good abstract thinkers, but our customers often aren't - thus why getting working products in front of them early is so important:
+
+
+
+<blockquote>"I would go a step further and assert that it is really impossible for a client, even working with a software engineer, to specify completely, precisely, and correctly the exact requirements of a modern software product before trying some versions of the product."
+</blockquote>
+
+The value in this approach seems to obvious yet it still isn't "the norm." I honestly cannot understand why customers don't demand this process.
+
+I try not be as wordy as <a href="http://steve-yegge.blogspot.com/">Steve Yegge</a> but Brooks summarizes my post on <a href="http://ntschutta.com/jat/2008/02/05/maybe-software-development-is-like-building-a-house/">house building</a> in less than fifty words:
+
+
+
+<blockquote>"Much of present-day software-acquisition procedure rests upon the assumption that one can specify a satisfactory system in advance, get bids for its construction, have it built, and install it. I think this assumption is fundamentally wrong, and that many software-acquisition problems spring from that fallacy."</blockquote>
+
+
+
+He goes on to discuss growing software, an analogy that really speaks to me. I remember mentioning something along these lines to a former co-worker only to be rather rudely dismissed:
+
+
+
+<blockquote>"Incremental development—grow, don't build, software."
+</blockquote>
+
+
+When I discuss agile with skeptics, I really try to hammer on this point:
+
+
+
+<blockquote>"One always has, at every stage in the process, a working system. I find that teams can grow much more complex entities in four months than they can build."
+</blockquote>
+
+All I can say is, I'm no Fred Brooks. But what does he know right?
+
+Systems that spin off for months (or years) without that iterative review tend to fail - often rather expensively. I remember one project many years ago where the client eventually ran out of money (remember the dot com implosion?) Due to decisions made outside my influence, we really didn't have anything he could use. Sure, he could "demo" the product, but he certainly couldn't sell it. We'd spent a great deal of time designing everything in the system - all the screens, all the interactions...too bad we hadn't spent more time building. Had we worked more iteratively, he would have had <strong>*something*</strong>. Oh well, lesson learned.
+
+As I mature in this industry, I become more aware of our pioneers; as I find my path I discover how far out they saw. Though recent times have seen amazing advances, we have much to learn from our past.

@@ -1,0 +1,25 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Ajax
+- Development
+title: What is Ajax?
+type: post
+published: true
+---
+I've been getting this question quite a bit lately - especially as people find out about <a href="http://www.amazon.com/exec/obidos/redirect?link_code=ur2&amp;camp=1789&amp;tag=ntschuttacom-20&amp;creative=9325&amp;path=tg/detail/-/1590595823/qid=1127567332/sr=8-1/ref=pd_bbs_1?v=glance%26s=books%26n=507846">Foundations of Ajax</a>.  Obviously I'm not the first to talk about this but I've developed a bit of a stock answer so here goes.  Don't agree with something I've said?  Let me know!
+
+First things first, Ajax has really lost its acronym status so if you're tossing around AJAX, you might get some funny looks.  That said, you'll see both versions depending on where you look so don't sweat it.  If anyone asks, AJAX stands for Asynchronous JavaScript and XML.  The term itself comes from Jesse James Garrett and his seminal piece <a href="http://www.adaptivepath.com/publications/essays/archives/000385.php">Ajax: A New approach to Web Applications</a>.  While the software world certainly didn't need yet another term, Garrett needed someway to succinctly describe "Asynchronous JavaScript+CSS+DOM+XMLHttpRequest."
+
+Second, Ajax is not a specific thing - it represents a collection of technologies, better yet, think of it as a technique.  You might argue that JavaScript and CSS and the DOM are nothing new, so what makes Ajax so special?  Notice above that the 'A' in Ajax, stands for Asynchronous.  Why is that interesting?  The standard web interaction is a request/response paradigm.  Remember, the Web started with a bunch of researchers sharing their reports and studies - a shopping cart was not part of the original concept.  Using <a href="http://www.ajaxian.com/">Ajaxian</a> techniques, we can create a richer more dynamic user interface by allowing asynchronous communication with the server.  This also means we don't have to refresh the entire page which can significantly improve the user experience.
+
+At this point you might be saying "<a href="http://www.ashleyit.com/blogs/brentashley/archives/000548.html">so what, I've done this for years</a>."  Truth be told, none of the technologies that Ajax represents are new - however, the widespread browser support is.  Many people (including me) have used iframes to call the server in the background or to submit/repaint just part of the page.  I'll admit, it works fine, but truthfully it's a hack.  Today, thanks to modern browsers allow us to take advantage of a Microsoft invention - the <a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">XMLHttpRequest</a> object (XHR for short).  XHR provides a simple mechanism that allows us to call the server and tie the response to a callback function.  With improved DOM support, we can take data from the server and modify just part of a page.
+
+This means we don't have to refresh the entire page just to fill in one or two fields.  A minor thing maybe, but it really opens up some new possibilities.  Like what you might ask?  Well, take a look at two of my favorite examples - the browse section of <a href="http://www.netflix.com/BrowseSelection?lnkctr=nmhbs">Netflix</a> and Google Maps.  With Netflix, just hover over any box cover.  A "tool tip" containing a significant amount of information pops up.  Go ahead, view the source, the information in the bubble isn't hiding in the page - it's requested when you mouse over a specific movie.
+
+What makes <a href="http://maps.google.com/">Google Maps</a> so special is the scrolling.  Want to see what's off the map?  Just use your mouse to drag the map.  That's it.  No repaint like Mapquest.  John Carroll glosses over this point in his blog on <a href="http://blogs.zdnet.com/carroll/?p=1499">Google Maps and innovation</a> but I really think the drag makes Google Maps so special.  And it's not rocket science!  The lads at Ajaxian (<a href="http://weblogs.java.net/blog/javaben/">Ben Galbraith</a> and <a href="http://www.almaer.com/blog/">Dion Almaer</a>) whipped out a version in less than 2 hours at a conference.  Don't believe me?  Check out their piece <a href="http://www.ajaxian.com/archives/2005/07/ajax_is_rocket.html">"Ajax is rocket science". "Ajax isn't simple". Enough already!</a>
+
+In a nutshell, Ajax is a technique that allows us to create richer web applications - applications that are often indistinguishable from their thick client cousins.  It certainly won't end world hunger or even guarantee you'll make it home in time for dinner, but Ajax will certainly influence what we build over the next few years.  We're only just starting to explore Ajax and what it means but I'm convinced it will ultimately make our web applications more responsive and improve usability.

@@ -1,0 +1,36 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rants
+- Software
+title: That's Interesting
+type: post
+published: true
+---
+The last couple of days I've been involved in what I would essentially term a code review of some things our off shore team recently completed. To say there were some issues would be a bit of an understatement and it has certainly helped cement the need for <a href="http://martinfowler.com/articles/continuousIntegration.html">continuous integration</a>, frequent review, and a strong test suite. While I expected some odd use of inheritance, the empty interfaces caught my eye and I spent longer than I like explaining why <a href="http://en.wikipedia.org/wiki/You_Ain't_Gonna_Need_It">YAGNI</a> would be the team's default position on pretty much anything. But none of that is really worthy of a blog post - that's just run of the mill coding stuff. No, the real inspiration was this little gem:
+
+<code>
+public class Constants {
+&nbsp;&nbsp;public interface UIConstants {
+&nbsp;&nbsp;&nbsp;&nbsp;public static final String foo = "foo";
+&nbsp;&nbsp;&nbsp;&nbsp;public static final String bar = "bar";
+&nbsp;&nbsp;}
+}
+</code>
+Now, I know some people think that interfaces are the cat's meow for storing constants, heck, I even did it once in a past life (I was young, I needed the money) but I've vowed never to follow that antipattern again. Don't just take my word for it - Joshua Bloch calls it out in his must read <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2F0201310058%3Fv%3Dglance%26n%3D283155%26s%3Dbooks%26v%3Dglance&tag=ntschuttacom-20&linkCode=ur2&camp=1789&creative=9325">Effective Java</a><img src="http://www.assoc-amazon.com/e/ir?t=ntschuttacom-20&amp;l=ur2&amp;o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> (I for one can't wait for the updated version). I've done my part to eradicate this erroneous use of interfaces but when I saw the code above I was floored.
+
+Frankly, I'm a little surprised it compiles but unfortunately it does. Of course I found myself asking <strong>*why*</strong> anyone would even think to use this approach. Wait, I can hear it know "we only have one place to go to look for constants and we have namespaces too." Um, OK, then please explain why there were a couple of other interfaces that were also called Constants and did you catch the whole antipattern comment? Furthermore, explain why you think it makes any sense at all to have an <em>interface</em> as a member of a <em>class</em>. Talk about abusing the constructs of Java.
+
+Needless to say, we extracted those so called interfaces into real honest to goodness classes that couldn't be instantiated. And for those of you that will complain about how painful it is to write <code>UIConstants.foo</code> in your code, have you heard about <a href="http://java.sun.com/j2se/1.5.0/docs/guide/language/static-import.html">static imports</a> yet? Should you go down this road though <strong>*please*</strong> don't go overboard; as the Sun guide says:
+
+
+
+<blockquote>If you overuse the static import feature, it can make your program unreadable and unmaintainable, polluting its namespace with all the static members you import. Readers of your code (including you, a few months after you wrote it) will not know which class a static member comes from.</blockquote>
+
+
+
+Needless to say, it's been an interesting few days reviewing this code - I wait with bated breath to see what next week brings.

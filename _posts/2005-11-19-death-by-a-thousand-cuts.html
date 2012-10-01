@@ -1,0 +1,22 @@
+--- 
+layout: post
+meta: 
+  _edit_last: "1"
+status: publish
+tags: 
+- Ajax
+title: Death By a Thousand Cuts
+type: post
+published: true
+---
+There seem to be a set of questions that any software developer worth his salt asks about any new technology: How are <a href="http://www.antipatterns.com/whatisapattern/">patterns</a> involved?  Will it help me get out of this crappy job?  Is there a conference around February in <a href="http://www.tahiti-tourisme.com/">Tahiti</a>?  Sometimes, we even ask questions about scalability.
+
+The other day, I gave a presentation on Ajax at my company.  Now, I only had thirty minutes so it's not like I got into anything deep but we did have some interesting questions.  Being surrounded by some really great software engineers, someone was bound to ask "does Ajax scale?"  Until recently, scalability was not the most important "<a href="http://www.answers.com/topic/ilities">ility</a>" in my world - I only had a few users and they only did a few transactions a week.  However, on my current application, scale matters.  We sell enterprise class software that is key to the businesses that purchase our wares.  For us, this is a central question.
+
+So, does Ajax scale?  Like any good computer scientist, I'll rely on my default answer: it depends.  If your architecture is solid, you shouldn't have any issues with scaling - in fact, if your app can scale well horizontally you'll be just fine.  However, a poorly designed system will be brought to its knees.  Of course, if your system isn't designed to scale, it really doesn't matter what you're doing on the client side - you will have problems!  That said, I'm very interested to see what kind of impact Ajax has on load testing - old assumptions about the number of concurrent users might not hold up when we consider the high number of fine grain calls that Ajax engenders.
+
+Ajax is certainly seeing wide spread adoption - heck, one of my hometown papers, the <a href="http://www.startribune.com/">Star Tribune</a>, has snuck in some hover magic lately.  While I think this is a very good thing, I also realize it will lead to an overuse of the technique.  I know, this is inevitable (new hammer - everything looks like a nail) but I plead with you: think before you leap.  At my company, we are actively looking at Ajax as a performance booster.  Being able to essentially "lazily instantiate" parts of our page will make them smaller and changing just a little piece of the DOM will cut down our full page refreshes.  Those are our primary focuses.  We aren't going to be rewriting our app as a <a href="http://getahead.ltd.uk/ajax/single-page-design">single page</a>!
+
+Don't forget, just because the calls are asynchronous doesn't mean they don't have a cost.  If you start making 30-50 calls on every page where before it was just a few, you might have some issues.  I can't help but think about the early days of EJBs (you remember those, right?) when we had a whole bunch of "get" calls that were all going across the network  and we all know what happened as a result of that experience.  Could we be too far away from JavaScript <a href="http://www.martinfowler.com/eaaCatalog/dataTransferObject.html">Data Transfer Objects</a>?
+
+The <a href="http://www.ajaxian.com/">Ajaxian</a> boys mentioned granularity in <a href="http://www.ajaxian.com/archives/2005/11/audible_ajax_ep_4.html">Audible Ajax 6</a> - it's around the 17th minute or so.  We have to think about the number of calls we are making to our server and try to minimize those.  For an interesting look at this, take a look at <a href="http://www.ajaxian.com/archives/2005/11/scaling_connect.html">Scaling Connections for Ajax</a>.  So, in a nut shell, yeah, Ajax scales - but that doesn't mean we should overdo it.  If we're not careful, we will kill our systems - with thousands of tiny little cuts.

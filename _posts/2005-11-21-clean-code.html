@@ -1,0 +1,23 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rants
+title: Clean Code
+type: post
+published: true
+---
+<blockquote>We who cut mere stones must always be envisioning cathedrals.
+-Quarry worker's creed
+</blockquote>
+
+That quote comes straight out of one of my favorite books: <a href="http://www.amazon.com/gp/product/020161622X/104-1739569-9217513?v=glance&n=283155&n=507846&s=books&v=glance">The Pragmatic Programmer</a>.  Ever since I stumbled on this book four plus years ago I have been an evangelist for its teachings.  I read the author's blogs (<a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">PragDave</a>, and <a href="http://www.toolshed.com/blog/">Andy's Blog</a>) religiously and I keep hoping the <a href="http://pragmaticstudio.com/">Rails Studio</a> will make a detour to the Midwest.
+
+Anyway, one of my absolute favorite pearls of wisdom from Pragmatic is "<a href="http://www.artima.com/intv/fixit.html">Don't Live with Broken Windows</a>."  Basically, a car in a seedy part of town will be left untouched until a single window is broken - then it'll be stripped in a matter of hours.  For more on the theory, check out the <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> entry: <a href="http://en.wikipedia.org/wiki/Broken_Windows">Fixing Broken Windows</a>.
+
+This theory was brought to my attention today in a code review.  Not that the code was bad (though truthfully, I don't know enough about the business yet to be able to do more than "that variable name isn't very descriptive") but it had some dead code in it.  I'll admit, there was a time (a brief while) when I didn't mind having lines and lines of commented out code but not anymore.  With <a href="http://www.onjava.com/pub/a/onjava/2004/11/10/automation.html">version control</a> (you do use version control right?) there just aren't any good reasons to keep unused code around.  All you're doing is making the code harder to read - and most of us prefer <a href="http://www.acmqueue.com/modules.php?name=Content&pa=showpage&pid=84">writing code</a> anyway!  A simple thing, sure, but next time you're editing some source and you run into a chunk of code that the compiler is ignoring do yourself and everyone else in your shop a favor and burry that code for good.  You can always look back at the history in your version control...
+
+<ins datetime="2005-11-22T02:34:39+00:00"><strong>Update:</strong> I knew there was something else that made me think of this topic recently.  <a href="http://www.computerworld.com/developmenttopics/development/story/0,10801,106105,00.html">Check out Anatomy of Ugly: How Good Code Goes Bad</a>.  This is what happens when you read way too many blogs and newsletters (or so my wife says).</ins>

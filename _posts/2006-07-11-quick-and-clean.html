@@ -1,0 +1,46 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rails
+- RailsConf
+- Rants
+- Software
+title: Quick and Clean
+type: post
+published: true
+---
+We've all been there.  You get that frantic call from a customer - somehow a bug got through your intensive suite of automated tests and your kick butt QA team (must have been that dang intern).  Of course the problem has to be fixed <strong>RIGHT NOW</strong> so they can get that much needed report to that ever so important vice president allowing him to make <strong>*very big*</strong> decisions.  You dutifully dig in and, despite that queasy feeling, you put in a quick and dirty little fix.  I know, you're going to go back in and fix it just as soon as you can...but then the next day, just as you're sitting down to put in the proper patch, wham, the project manager ambushes you from behind the plastic <a href="http://www.evergrowing.com/tips/ficustree.htm">ficus</a> tree.  Can you say "cat like quickness?"
+
+The PM has an urgent request (aren't they all?) - someone very important is going to be in the office tomorrow and needs a demo of that snazzy new feature she promised you'd add to the system (you know, the one you said was nearly impossible to do).  Don't worry about implementation, just make it <strong>*look*</strong> like it works!  If you're like most of the people I've worked with, you swallow hard and get to it pounding out something that functions...mostly.  Sure, you had to cut some corners, but it made the PM happy and, well, it <em>is</em> for an important customer.  Tomorrow though, you're going to refactor the quick fix and get the new feature squared away.
+
+Alas the next day brings yet another crisis and your best laid plans are cast asunder.  Day after day, we are often asked to put in quick and dirty fixes.  Can it be any different?  I mean we can't possibly do quick and clean could we?  Well, <a href="http://jroller.com/page/obie">Obie Fernandez</a> thinks there's a way: <a href="http://www.rubycentral.com/">Ruby</a> and its close personal friend <a href="http://www.rubyonrails.org/">Rails</a>.  In a recent post about <a href="http://jroller.com/page/obie?entry=thoughtworks_on_rails_enterprise_adoption">enterprise adoption</a> (essentially expanding on <a href="http://ntschutta.com/jat/2006/06/24/railsconf-day-2/">his talk at RailsConf</a>) Obie offers some great advice on how to pitch Rails to the enterprise.  He hits it on the head when he says:
+
+
+
+<blockquote>The biggest challenge, in my opinion, is that lots of teams doing J2EE have people are used to thinking that quick == dirty. <a href="http://metaatem.net/2006/06/23/railsconf-keynote-martin-fowler">Martin's keynote</a> had tons of good information for anyone wanting to evangelize Ruby as enabling quick and clean solutions, and well-written Rails applications are all about quick and clean.</blockquote>
+
+ 
+
+Amen.  I've seen a ton of quick and dirty code in my day and much as it makes my stomach turn, I can empathize with the developer that did it (well, to a point).  But it doesn't have to be that way!  As <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> said, it's sure slick when you work with <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/UnsetGlue.html">glue that doesn't set</a>!  Much as I'd like to think this would be a compelling enough argument to woo even the crustiest of developers, I think Obie nails the underlying problem:
+
+
+
+<blockquote>I think the hardest thing about convincing hardcore J2EE devs would be that a lot of those programmers actually get off on the complexity and building of framework upon framework. Most people I know doing Java are not application developers! They are programmers and they like working on plumbing!</blockquote>
+
+
+
+There's not much in the way of plumbing code in a Rails app; it feels to me like virtually every line of code is about delivering business value.  There aren't any little black boxes where people can invent massive subsystems that are little more than their personal playpen.  With the rapid feedback loops, it's darn hard to venture off on some neat little complexity hunt just to soothe your need to utilize that new library.  Or put more succinctly:
+
+
+
+<blockquote>J2EE teams tend to be larger, due to the extra complexity. Big projects usually give individual members freedom to perform below their abilities and/or skate by working on pet projects and miscellaneous bullshit that does not add business value.
+</blockquote>
+
+
+It's from these folks that Rails backers will hear things like "Rails doesn't scale" or "Rails isn't ready for the enterprise" or even "Rails is <a href="http://www.paulgraham.com/marginal.html">inappropriate</a>".
+
+Maybe Rails will never truly be enterprise - perhaps that's a good thing.  The contrarian nature of Rails is one of its greatest strengths and I hope it never loses that.  Rails isn't right for every application (of course we don't really know the boundaries yet) but it sure fits a big niche.  Observant organizations will hop on board, change their thinking and create some amazing applications.  Those that are dominated by a certain type of developer will invent reasons why Rails won't work and wallow in the complexity of their chosen path.  Chances are, they'll never get to quick and clean.

@@ -1,0 +1,39 @@
+--- 
+layout: post
+meta: 
+  _edit_last: "1"
+status: publish
+tags: 
+- Development
+- Rants
+- Software
+title: Vendors are Risky Too
+type: post
+published: true
+---
+"We're not a software company" is a common refrain these days; ever since Nicholas Carr's "<a href="http://www.nicholasgcarr.com/articles/matter.html">IT Doesn't Matter</a>," it seems like more and more companies are bending over backwards to prove they don't do IT. In the process, some consultancies have made a ton of money, often by "replacing" a given company's IT department with the newly hired agency replete with people from....the company's former IT staff. More than a few of my friends went to work one day as an employee of company X only to enter the office the next day via a contractor badge. As companies aped one another, we heard more and more about "core competencies" and how smart companies stuck to what they did best.
+
+Implicit in this arrangement is a transfer of risk - and many (on both the business and IT side of the shop) equate vendors with risk free, or at least, if things go south we have a <a href="http://images.google.com/images?hl=en&um=1&sa=1&q=homer+strangling+bart&btnG=Search+Images&aq=f&oq=">throat to throttle</a>. While it can be empowering to scream at a vendor rep, that doesn't mean you'll get your problem solved - or that they'll even be inclined to try. Vendor priorities mar or may not line up with yours and more often than not, that service contract entitles you to the C squad, not the A players they showed you during the courtship.
+
+Make no bones about it, when you saddle up with a vendor, it's a commitment, one you best enter into with your eyes open. Just like with your spouse, year two is rarely the same as the first date and having a phone number to call doesn't mean you'll get an answer you'll like - or even an answer at all. Sure, you can open a problem ticket, but when will it be resolved? Don't hold your breath, unless your CIO calls their CIO at least. Oh, and never assume the vendor's developers write higher quality code than you do - some of the worst smelling <a href="http://www.laputan.org/mud/">balls of mud</a> were slung by people working for "software companies."
+
+While we're on the topic of software companies, don't automatically think that the vendor is anymore of a "software company" than you are. It may <strong>*seem*</strong> like they're in the same camp as Microsoft or Oracle, but take a look at their income statements - does "professionals services" make up a large percentage of the bottom line? Odds are it does, the software is the modern day equivalent of <a href="http://itotd.com/articles/295/giving-away-the-razor-selling-the-blades/">razors</a>; they'll darn near give it away (OK, if you call 7 figures "give") so they can line up a nice fat services contract (mmm, smell the subscription fee!) In some cases, your odds of successfully implementing the project rapidly approach zero without a significant investment in contractors at $250 an hour and up. Nice work if you can get it.
+
+Speaking of contractors, before you pull the trigger on that shiny box of vendor joy, take a look around the job boards to see if anyone is looking for developers with that skill set. Better yet, have your HR people look over recent job applicants to see how many boast time with your new love. Staffing models aren't always at the forefront, but if you can't hire people to twiddle the vendor bits, take a look around your cube farm and be sure you've got something people will want to train up on. Don't be surprised when your techies aren't thrilled by the notion of babysitting a piece of packaged software.
+
+Once you've committed to a vendor, you live life on their schedule. Occasionally you might be able to nudge things but chances are you'll be treated like the rest of the huddled masses. In some cases this might be just fine, but in others it can have a significant impact on your business. Found a critical bug? Odds are that won't be fixed until the next release...sometime next year. You're also stuck with their priorities and again, while you might have some influence here, more often then not, your pet feature isn't so important to the decision makers at Vendor Co.
+
+When you bring in a vendor, expect a platform play - and not all platforms are created equally. The excitement in Java land these days isn't over Java the language, it's Java the platform that gets the much deserved press for housing the likes of <a href="http://clojure.org/">Clojure</a>, <a href="http://wiki.jruby.org/wiki/Main_Page">JRuby</a>, <a href="http://www.scala-lang.org/">Scala</a>, <a href="http://groovy.codehaus.org/">Groovy</a> (hint, your developers would love to play with any of the preceding) and a host of others. While the Java platform (and it's <a href="http://en.wikipedia.org/wiki/Common_Language_Runtime">peer from Microsoft</a>) offer a slew of choices, the vendor's platform is probably designed like the <a href="http://www.youtube.com/watch?v=ea0CDieb4yM">Hotel California</a>; once a company has invested time, effort and money, they will usually continue to throw good money after bad.
+
+I'm not saying you should never purchase a vendor product - far from it. You shouldn't write your own database server, you own app server, <a href="http://blogs.tedneward.com/2006/06/26/The+Vietnam+Of+Computer+Science.aspx">your own OR mapper</a> or your own build framework (OK, maybe as a replacement to Maven, sure I can see that.) But when it comes to core competencies, the things that make your company special, that's not something you should be too keen on farming out. As my friend <a href="http://www.nealford.com/">Neal Ford</a> is fond of saying, <a href="http://memeagora.blogspot.com/2005/01/software-development-time-warp.html">smart companies understand that IT is strategic</a>.
+
+When it is time to purchase some software, perform a true evaluation - and one that's up to date. Just because the Foobaz team gave the product the thumbs up <em>three years ago</em> doesn't mean they'd say the same thing today. Heck, that team might not have even considered the same criteria you are. Too often, we either run through a script that is oddly similar to the vendor's demo or we try out a couple of hello world size examples; you've got to spend some quality time with a product to figure out when <a href="http://memeagora.blogspot.com/2007/11/ruby-matters-frameworks-dsls-and.html">Dietzler's law</a> kicks in. Regardless of what you're evaluating there are certain things you should pay extra special attention to:
+
+<ul>
+	<li>The testing story. If a tool doesn't have a good <strong>*automated*</strong> testing story, fail, or as we say in the project room, <a href="http://lighthousepatriotjournal.files.wordpress.com/2006/09/frog-in-lettuce_joan-b.jpg">frog in a bag</a> (FIAB for short).</li>
+	<li>Version control. Repeat after me: copying the files to the LAN isn't version control. Life without source code management just isn't worth living, if the tool doesn't fit within something like <a href="http://subversion.tigris.org/">Subversion</a> or <a href="http://git-scm.com/">Git</a>, your evaluation is over.</li>
+	<li>Can you diff the artifacts? I'm a fan of pictures, but show me the tool that can diff that fancy BPEL visualization. Oh and good luck with those massive XML files.</li>
+</ul>
+
+
+I'm sure you have other criteria too (Neal has a good list in <a href="http://memeagora.blogspot.com/2009/02/tools-anti-behavior-soa-tarpit-of.html">part three</a> of his SOA series) but these three are absolute deal breakers for me. Again, I'm not saying you should build everything, but when you do choose to purchase, be sure you know what you're getting into. Can you live with the constraints? Are you comfortable with the tradeoffs? If so, I wish you all the best. But don't blithely assume vendors aren't risky.

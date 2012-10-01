@@ -1,0 +1,46 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rails
+- RailsConf
+- Software
+title: RailsConf Day 1
+type: post
+published: true
+---
+Clearly I got up too late this morning - by the time I got down for breakfast, the ballroom was <strong>*packed*</strong>: to the point where there weren't three seats at a single table for the other Minnesota lads I hooked up with!  After some intro material from the <a href="http://www.rubycentral.com/">Ruby Central</a> gang, <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> presented his keynote where he challenged the community to:
+
+<ul>
+	<li>Improve data integration
+</li>
+	<li>Come up with a better solution to real world CRUD
+</li>
+	<li>Fix deployment
+</li>
+</ul>
+
+Frankly, Rails has to answer a few key questions if it wants to grow beyond the alpha geek stage - of course whether the community ever wants to be mainstream is a very good question.  Dave challenged the attendees to meet the proverbial "average Java programmer" half way - otherwise, Rails will just remain a niche.  Obviously Rails will continue to mature (heck, someday it might even be <em>enterprise</em>) and I think a lot of the things that Dave talked about will get fixed (probably soon).  But the community is going to have to do it - the core team only has so much time.  The message I took away is oddly similar to the mantra at <a href="http://ntschutta.com/jat/2006/06/10/reflections-on-javaone/">JavaOne</a> - participate, participate, participate.
+
+My first session of the day was <a href="http://clarkware.com/">Mike Clark</a> on <a href="http://manuals.rubyonrails.com/read/book/17">Capistrano</a> (apparently <a href="http://jamis.jamisbuck.org/">Jamis Buck</a> had a passport issue so Mike pitch hit).  Having only just toyed around with apps on my machine and having read other people's accounts of deployment heck, I left thinking Capistrno is pretty much the cat's meow.  And it isn't just for Rails dangit!  Pretty much anytime you need to move some files around, cap can help.  Obviously we didn't get too deep into deployment (heck the Prag guys have a <a href="http://pragmaticstudio.com/deploy/index.html">whole seminar</a> devoted to) but it sure seems like it's one of the rough spots that needs buffing (luckily there is a lot of energy in that space so I expect it'll only get better - but <a href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/Ruby/MikesCapistranoTalk.html">don't just take my word for it</a>).
+
+I choose poorly on my second talk; it was pretty disappointing.  While there were a few nuggets in there about discovering what users need vs. want, I was really left wondering how this applied in any way, shape, or form to Rails - I mean seriously, how did that abstract get past the organizers?  OK, so it wasn't really that bad but had the room not been packed to point where the fire marshal would have disapproved, I just stuck it out.  Luckily, the rest of the day more than made up one little blip.
+
+As a certified "enterprise" developer, I've never really had to deal with authentication issues (there was always a group for that) so I figured I better take a look at the session on identity and rails.  Kiran Dandekar of VeriSign gave a fantastic overview of identity (reminiscent of Dick Hardt's <a href="http://www.identity20.com/media/OSCON2005/">Identity 2.0</a> talk at OSCON 2005).  Kiran and Mike (I think!) talked quite a bit about their <a href="http://pip.verisignlabs.com/">Personal Identity Provider</a> (based on <a href="http://openid.net/">OpenID</a>).  Considering what it allowed you to do (imagine never creating another login again - and selectively choosing what information was given to each site) I am very interested in pursuing this for my login needs.  <strong>VERY</strong> cool stuff.
+
+Next up was a session from Amy "<a href="http://slash7.com/">slash7.com</a>" Hoy on how to overcoming scaffolding addiction.  While Dave argued for better scaffolding, Amy was advocating running in the opposite direction.  Her talk walked us through the basics in an effort to prove we don't really need the generated code.  Sure, it might look cool, but at the end of the day, the only way to learn is to jump in.
+
+The evening was jam packed - keynotes from none other than <a href="http://www.martinfowler.com/">Martin Fowler</a> and <a href="http://www.paulgraham.com/">Paul Graham</a> plus a command performance from <a href="http://whytheluckystiff.net/">Why the Lucky Stiff</a>.  Fowler's talk was fantastic!  He talked about the drive towards simplicity and the significant influence that Rails has had on software (something that was quite evident at JavaOne).  He also said something that really stuck for me: <em>quick doesn't have to be dirty</em>.  Languages like Ruby, frameworks like Rails allow us to be quick and clean, something that is very powerful.
+
+He also talked about the need for a conversational relationship with customers instead of one where we simple write down a stream of "this is what I want".  He emphasized the need for rapid feedback allowing us to converge on a solution based on mutual exploration.  He quoted the tracer bullets method from <a href="http://www.pragmaticprogrammer.com/ppbook/index.shtml">Prag Programmer</a> emphasizing that if the bullets are cheap enough, fire-aim, fire-aim, fire-aim is a heck of a lot more efficient than aim-aim-aim-aim-aim-aim-aim-fire!  Of course rapid feedback is also likely to mean a more engaged customer which naturally leads to a better solution.
+
+After talking about what happens when we are freed from worrying about plumbing code (we can focus on solving actual business problems) he talked about <a href="http://comjnl.oxfordjournals.org/cgi/content/abstract/41/6/363">post modern software development</a>.  Basically, the idea is that rather than creating these perfect (modern) structures where everything is the same, we essentially just hack things together.  Take UNIX - it's one of the stablest operating systems out there and it is mostly just a hodgepodge glued together...but it works!  Funny, isn't that the story in nature?  He challenged us to change the way we think and to focus on gluing scraps together, to just deal with the complexity and the inconsistencies.  His parting words really rang true though - at the end of the day, it's about the community.  We're what matters, we're what make a difference.
+
+After grabbing a bite to eat, I was very excited to hear Paul Graham live.  I've read plenty of his stuff and listened to the odd pod cast here and there but I'll admit, I bought my ticket based largely on the keynotes (how can you go wrong with this crew?)  As expected, Paul did not disappoint (he was hilarious!) and I can't wait to read the online version of his talk...  Of course there were lots of memorable lines (I'm working on a quote post for later) but his main point was "look to the margins."  He preached the values of being an outsider discussing the freedom that comes with being small and obscure.  Successful companies are often victims of their very success - they can't cannibalize themselves.  They often overlook certain opportunities because they lack prestige or aren't large enough (or enterprise enough!)  If you're not sure what to do, Paul advised that you just make something.  Seriously, after listening to this guy, a startup just sounds like a good idea!
+
+OK, at this point, I'm twelve hours into a day devoted to a technology I don't even get to use in anger (I'm amazed at just how many people are making money on this stuff) but we're not done yet!  Oh no, it's time for Why to regal us with his music and humor.  You know, I've heard the buzz before and I think I even listened to a podcast from SxSW or something but I've got to tell you, if you haven't heard him live...well, something is clearly lost in translation.  Maybe Paul was just a great warmup act (I mean no disrespect), but Why was ridiculously funny!  The whole <a href="http://images.google.com/images?q=koala+bear&hl=en&lr=&sa=X&oi=images&ct=title">Koala bear</a> thing was great but the, ahh, interesting Ruby hacks were right up there too.  I'm sure I only caught half the jokes but let me say - if you ever get a chance to see Why live, do <strong>*not*</strong> miss it.
+
+Well, that's enough for now - my wife is already snoring and tomorrow is another long day!

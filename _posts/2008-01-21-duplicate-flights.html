@@ -1,0 +1,26 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Off Topic
+- Software
+- Travel
+title: Duplicate Flights
+type: post
+published: true
+---
+In early December, I did something that, a mere year earlier, I thought was pretty darn strange. I spent a Saturday in the last month of the year on a plane. <a href="http://ntschutta.com/jat/2007/07/20/travel-notes/">Travel</a> you say? Gee, you've <a href="http://ntschutta.com/jat/2007/07/28/a-quiet-friday-night/">never</a>, <a href="http://ntschutta.com/jat/2007/06/03/thats-interesting/">ever</a>, ever <a href="http://ntschutta.com/jat/2007/02/08/random-travel-notes/">written</a> about <a href="http://ntschutta.com/jat/2008/01/04/seat-21c/">that</a>. <a href="http://ntschutta.com/jat/2006/10/20/ah-travel/">Ever</a>. No, this trip was different, this trip was special - I wasn't going anywhere; this time I was just getting status. I flew from Minneapolis to Chicago, walked one gate over to take a flight to Detroit, bought some chocolate for my mother-in-law (at <a href="http://www.gayleschocolates.com/">Gayle's Chocolates</a> you see!) and then retraced my steps back home. Since I'm not quite as frequent a traveler as <a href="http://blogs.tedneward.com/">Ted</a>, <a href="http://memeagora.blogspot.com/">Neal</a>, <a href="http://vita-contemplativa.blogspot.com/">Brian</a>, <a href="http://www.agiledeveloper.com/blog/">Venkat</a> or the <a href="http://www.nofluffjuststuff.com/speaker_list.jsp">rest of the gang</a>, I needed a few more legs to put me <a href="http://www.nwa.com/worldperks/program/overview/">over the top</a> and spending a few hours in the air was the cure.
+
+Of course I'm not the only one to do something like this - heck, the previous year a good friend of mine flew to Germany to retain her status. Yep, all the way to the land of <a href="http://en.wikipedia.org/wiki/Riesling">Riesling</a> where she spent a few hours in the airport only to return home. I thought she was crazy, but now I get it.
+
+Anyway, I checked my mileage summary a month or so ago and noticed I'd only received credit for two of the four legs leaving me ever so short of my goal. Luckily, the website has a form one can use to request credit so I gave them a few bits of information and sat back. A couple of weeks later I still didn't have the legs so I submitted the request again. Now, my miles program knows several ways to get in touch with me - they have my home address, a phone number and of course my email address. Yet I never received anything via any of these means explaining why my credit hadn't shown up. So, after digging around the site for a few minutes I finally found a phone number.
+
+Today I called. As you might expect, I faced off with an elaborate phone tree that mostly wanted to tell me things I either already knew or could easily find online. Saying "Help" didn't, ah, help but pounding zero got the job done (should have used <a href="http://gethuman.com/">get human</a>.) After explaining my situation to the very helpful (I mean it!) agent, she quickly diagnosed the problem. You see, the software had decided my flights were duplicates since they occurred on the same day. Huh.
+
+Now, I'll grant that what I did isn't on the happy path and represents a bit of an edge case but lets reason through this a bit. Let's imagine the query: <code>select flights where date = whatever they entered on the form</code>. OK, so if that returns multiple records we somehow decide some of those clearly are the same because, you know, <em>they happened on the same day</em>. Hmm, what <strong>*other*</strong> information might we be able to use to discriminate? Well, there's the departure and destination airports and last I checked flying to Chicago from Minneapolis isn't the same as flying to Minneapolis from Chicago. But, perhaps the system doesn't check for locations - after all the form only asks for frequent flier number, date, and ticket number.
+
+If we grant that the location information might not be that helpful we're left to ponder...what else could we use to disambiguate these aberrational flights? How about flight number? Why yes, I think we've hit on something here! Each of these flights had a unique flight number. Wow, I can't <em>imagine</em> how a software program could possibly tell the difference between flight 656 and 676 (or whatever the numbers might be.) Yeah, that right there is one of those unsolvable problems, maybe the <a href="http://www.wired.com/cars/futuretransport/magazine/16-01/ff_100mpg_sb">X Prize Foundation</a> can get involved.
+
+The agent (again, she really was very nice) took care of the problem but oddly, she couldn't just fix it for me. Nope - she had to <em>send an email to a clerk</em> and have them <strong>manually</strong> add my legs into the system (which apparently takes up to two weeks.) Boy, not only can't the system correctly tell the difference between two, ah, <strong>different</strong> flights, they don't even have an easy way for an agent to fix the problem. Sigh.

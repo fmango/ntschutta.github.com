@@ -1,0 +1,23 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Agile
+- Development
+- Rants
+- Software
+title: Functional Specs
+type: post
+published: true
+---
+Depending on who you believe, functional specs are either an <a title="Painless Functional Specifications" href="http://www.joelonsoftware.com/articles/fog0000000036.html">absolute must</a> or something to be <a title="Getting Real, Step 1: No Functional Spec" href="http://www.37signals.com/svn/archives/001050.php">avoided like the plague</a>.  While I vacillate on the necessity of written docu, if pressed I trend towards the <a title="SvN" href="http://www.37signals.com/svn/">37signals</a> approach - the code never lies (misleads, sure) and iterating code tends to provide better answers anyway.  That said, there have been occasions where I <strong>*really*</strong> would have liked something more concrete than "it has to be like the old system...only better" or "the requirements are whatever I say they are".  While I'll concede the need to write <em>something</em> down, I've seen many examples that go a bit, ah, overboard when it comes to specs.  Seriously, if it <em>needs</em> a table of contents and an index, it's time to pare it down a bit.
+
+The struggle comes down to purpose: why do we write functional specs?  Some companies believe they should be the complete conveyance between customers and developers - when you get there, you're in trouble.  By the time you've finished writing down every possibility (and sat through many, many mind numbing meetings), chances are the business has changed three or four times obviating all of your hard work.
+
+So the question is, <a title="Venkat's blog" href="http://www.agiledeveloper.com/blog/PermaLink,guid,d2b1f4d7-f914-408c-a2b4-52046a14defd.aspx">what should a requirements document provide?</a>  Agile mentor <a title="Venkat's blog" href="http://www.agiledeveloper.com/blog/default.aspx">Venkat Subramaniam</a> nails this issue right on the head - instead of trying to map every fork, provide enough depth to help the developer explore the issues.
+<blockquote>Rather than providing answer to all my questions, I would like for it to help me ask the right questions when I am ready to delve into the implementation.
+
+A great requirements document helps me not with right answers, but with right questions.</blockquote>
+Keep this in mind next time you sit down to write a spec - it should aide communication, not supplant it.  Help your devs ask the right questions, don't try and answer every single one.

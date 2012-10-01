@@ -1,0 +1,20 @@
+--- 
+layout: post
+meta: {}
+
+status: publish
+tags: 
+- Development
+- Rants
+- Software
+title: Java Generics
+type: post
+published: true
+---
+I have to admit, I'm a little late to the "<a href="http://java.sun.com/developer/technicalArticles/releases/j2se15/">Java 5</a>" party.  My last project was stuck on WAS 5.something and we just barely got to Java 1.4 before I wandered off for greener pastures.  Of course about this time last summer I started getting a lot more interested in <a href="http://www.amazon.com/exec/obidos/tg/detail/-/1590595823/ref=ase_ntschuttacom-20/102-9579157-7996951?v=glance&s=books">Ajax</a>, <a href="http://www.rubycentral.com/">Ruby</a>, <a href="http://www.rubyonrails.org/">Rails</a>, <a href="http://www.apple.com/macosx/">OS X</a> and whatnot so I just didn't pay that much attention to the newest features.
+
+These days, my application <strong>*requires*</strong> 1.5.06 and we are highly encouraged to take advantage of the newest language features.  Now I'll admit, even when I was mired in 1.4 land, I was pretty intrigued by generics and with that in mind, I was pretty interested in <a href="http://www.agiledeveloper.com/blog/">Venkat Subramaniam</a>'s talk on the topic when the <a href="http://www.nofluffjuststuff.com/">No Fluff</a> tour swung into town last year.  Without a doubt, Venkat's talk was one of the highlights of the show and I was left feeling pretty good about our (admittedly pre 1.5) approach of just wrapping a collection and typing the methods we wanted to expose (this gave us some side benefits beyond type safety - we could create methods like getFooAfterDate, we could limit the API, and we could program more defensively if we needed to).
+
+Anyway, I've been getting into quite a few debates these days about using generics where I seem to be the lone voice against (I am buoyed by <a href="http://blog.rapidred.com/">Bruce Tate</a>'s comments in <a href="http://www.amazon.com/gp/redirect.html?link_code=ur2&tag=ntschuttacom-20&camp=1789&creative=9325&location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2F0596100949%2Fsr%3D8-1%2Fqid%3D1150769062%2Fref%3Dpd_bbs_1%3F%255Fencoding%3DUTF8">Beyond Java</a> along with Venkat's articles: <a href="http://www.agiledeveloper.com/articles/GenericsInJavaPartI.pdf">part 1</a>, <a href="http://www.agiledeveloper.com/articles/GenericsInJavaPartII.pdf">part 2</a>, <a href="http://www.agiledeveloper.com/articles/GenericsInJavaPartIII.pdf">part 3</a>).  Some of our technical leaders thing generics are the greatest thing since sliced bread and while I don't agree, I did find myself using them the other day on an interface I was creating (I know, I still feel a little...dirty).  While I'm clearly not going to change too many minds, I have to admit, running into <a href="http://jroller.com/page/murphee?entry=java_generics_faq_433_pages">Java Generics FAQ: 433 pages...</a> on <a href="http://jroller.com/page/murphee">murphee's Rant</a> (which links to <a href="http://www.angelikalanger.com/">Angelika Langer</a>'s <a href="http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html">Java Generics FAQ</a>) really got my attention.  I mean, hey, generics are a good concept, but any implementation that inspires a FAQ of this length?  Wow, that's hard to fathom.
+
+Now, I'll admit, I've never really liked typing the casts but I'm not so sure that <code>List&lt;Type> myList = new ArrayList&lt;Type>()</code> is a huge step forward (and just read a bit about type erasure).  Hey, I'm all for better code but I've just got to ask - when was the last time you got a class cast exception in your production code?
